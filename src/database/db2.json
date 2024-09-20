@@ -1,0 +1,41 @@
+{
+  "register": [
+    {
+      "id": "1",
+      "name": "Raja",
+      "email": "Raja@gmail.com",
+      "password": "Raja123#",
+      "image": ""
+    },
+    {
+      "id": "6b60",
+      "name": "sunanda",
+      "email": "sunanda@gmail.com",
+      "password": "sunu@gmail.com",
+      "image": [
+        "[object Object]",
+        {}
+      ]
+    },
+    {
+      "id": "3474",
+      "name": "gochu",
+      "email": "ghochu@gmail.com",
+      "password": "ghochu123#",
+      "image": [
+        "[object Object]",
+        {}
+      ]
+    },
+    {
+      "id": "5ad2",
+      "name": "Raghu Das",
+      "email": "Raghu@gmail.com",
+      "password": "Raghu123#",
+      "image": [
+        "[object Object]",
+        {}
+      ]
+    }
+  ]
+}
