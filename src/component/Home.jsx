@@ -9,11 +9,10 @@ import SpecialDish3 from './specialDish3.jpg';
 function Home() {
   return (
     <>
-      {/* Section 1: Banner */}
+      {/* Section 1: Banner page*/}
       <Box
-    
         sx={{
-          backgroundImage: `url(${Banner})`,
+          backgroundImage: `linear-gradient(to left,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(${Banner})`,
           height: '100vh',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -22,11 +21,9 @@ function Home() {
           justifyContent: 'center',
           color: 'white',
           position: 'relative',
-        
         }}
       >
-
-        <Box sx={{ position: 'relative', zIndex: 2, p: 4, borderRadius: 2, maxWidth: '80%' }}>
+        <Box sx={{p:4,borderRadius:2,maxWidth:'100%'}}>
           <Typography variant="h2" gutterBottom sx={{ fontWeight: 'bold', textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
             Good Food, Good Life
           </Typography>
@@ -45,15 +42,14 @@ function Home() {
           <Typography variant="h3" color="primary" align="center" gutterBottom>
             Our Culinary Excellence
           </Typography>
-          <Divider sx={{ mb: 4, width: '60%', mx: 'auto' }} />
+          <Divider sx={{ mb: 4, width: '60%', mx: 'auto' }}/>
+          
           <Grid container spacing={4}>
-            
             <Grid item xs={12} md={4}>
-              <Box sx={{ px: 3, textAlign: 'center', borderRadius: 2, boxShadow: 3, backgroundColor: '#fffde7' }}>
+              <Box sx={{ p:3,borderRadius: 2, boxShadow: 5, backgroundColor: '#e8eaf6', height: '100%' }}>
                 <Typography variant="h5" color="secondary" gutterBottom>
                   Exquisite Flavors
                 </Typography>
-
                 <Typography variant="body1">
                   Experience an orchestra of flavors where each dish is a masterpiece, delicately balanced to captivate your taste buds.
                 </Typography>
@@ -61,7 +57,7 @@ function Home() {
             </Grid>
 
             <Grid item xs={12} md={4}>
-              <Box sx={{ p: 3, textAlign: 'center', borderRadius: 2, boxShadow: 3, backgroundColor: '#e8f5e9' }}>
+              <Box sx={{ p:3,borderRadius:2,boxShadow:5,backgroundColor:'#e8eaf6',height:'100%'}}>
                 <Typography variant="h5" color="secondary" gutterBottom>
                   Fresh Ingredients
                 </Typography>
@@ -70,8 +66,9 @@ function Home() {
                 </Typography>
               </Box>
             </Grid>
+
             <Grid item xs={12} md={4}>
-              <Box sx={{ p: 3, textAlign: 'center', borderRadius: 2, boxShadow: 3, backgroundColor: '#fce4ec' }}>
+              <Box sx={{p:3,textAlign:'center',borderRadius:2,boxShadow:5,backgroundColor:'#e8eaf6',height:'100%'}}>
                 <Typography variant="h5" color="secondary" gutterBottom>
                   Authentic Recipes
                 </Typography>
@@ -93,7 +90,7 @@ function Home() {
           <Divider sx={{ mb: 4, width: '60%', mx: 'auto' }} />
           <Grid container spacing={4}>
             <Grid item xs={12} md={6}>
-              <Box sx={{ p: 4, borderRadius: 2, boxShadow: 3, backgroundColor: '#e3f2fd' }}>
+              <Box sx={{ p: 4, borderRadius: 2, boxShadow: 5, backgroundColor: '#e8eaf6', height: '100%' }}>
                 <Typography variant="h5" color="primary" gutterBottom>
                   Healthy Meals
                 </Typography>
@@ -102,8 +99,9 @@ function Home() {
                 </Typography>
               </Box>
             </Grid>
+
             <Grid item xs={12} md={6}>
-              <Box sx={{ p: 4, borderRadius: 2, boxShadow: 3, backgroundColor: '#ede7f6' }}>
+              <Box sx={{ p: 4, borderRadius: 2, boxShadow: 5, backgroundColor: '#e8eaf6', height: '100%' }}>
                 <Typography variant="h5" color="primary" gutterBottom>
                   Unmatched Dining Experience
                 </Typography>
@@ -124,60 +122,41 @@ function Home() {
           </Typography>
           <Divider sx={{ mb: 4, width: '60%', mx: 'auto' }} />
           <Grid container spacing={4}>
-            <Grid item xs={12} md={4}>
-              <Card sx={{ borderRadius: 2, boxShadow: 3 }}>
-                <CardMedia
-                  component="img"
-                  height="200"
-                  image={SpecialDish1}
-                  alt="Winter Delights"
-                />
-                <CardContent>
-                  <Typography variant="h5" gutterBottom>
-                    Winter Delights
-                  </Typography>
-                  <Typography variant="body1">
-                    Warm up with our seasonal winter dishes, featuring rich flavors and comforting ingredients that make cold days more enjoyable.
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Card sx={{ borderRadius: 2, boxShadow: 3 }}>
-                <CardMedia
-                  component="img"
-                  height="200"
-                  image={SpecialDish2}
-                  alt="Spring Freshness"
-                />
-                <CardContent>
-                  <Typography variant="h5" gutterBottom>
-                    Spring Freshness
-                  </Typography>
-                  <Typography variant="body1">
-                    Celebrate spring with vibrant, fresh dishes that highlight seasonal ingredients, bringing a burst of freshness to your table.
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Card sx={{ borderRadius: 2, boxShadow: 3 }}>
-                <CardMedia
-                  component="img"
-                  height="200"
-                  image={SpecialDish3}
-                  alt="Summer Refreshments"
-                />
-                <CardContent>
-                  <Typography variant="h5" gutterBottom>
-                    Summer Refreshments
-                  </Typography>
-                  <Typography variant="body1">
-                    Beat the heat with our light and refreshing summer dishes, perfect for those sunny days, featuring cooling ingredients and vibrant flavors.
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
+            {[
+              { image: SpecialDish1, title: 'Winter Delights', description: 'Warm up with our seasonal winter dishes, featuring rich flavors and comforting ingredients.' },
+              { image: SpecialDish2, title: 'Spring Freshness', description: 'Celebrate spring with vibrant, fresh dishes that highlight seasonal ingredients.' },
+              { image: SpecialDish3, title: 'Summer Refreshments', description: 'Beat the heat with our light and refreshing summer dishes, perfect for sunny days.' },
+            ].map((dish, index) => (
+              <Grid item xs={12} md={4} key={index}>
+                <Card sx={{
+                  borderRadius: 3,
+                  boxShadow: 8,
+                  backgroundColor: '#e8eaf6',
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                  },
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}>
+                  <CardMedia
+                    component="img"
+                    height="200"
+                    image={dish.image}
+                    alt={dish.title}
+                  />
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography variant="h5" gutterBottom>
+                      {dish.title}
+                    </Typography>
+                    <Typography variant="body1">
+                      {dish.description}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
           </Grid>
         </Container>
       </Box>

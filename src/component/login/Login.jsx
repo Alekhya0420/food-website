@@ -85,8 +85,8 @@ function Login() {
         backgroundImage: `url(${chola})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        opacity: 0.5, // Adjust this value to make the image more/less hazy
-        zIndex: -1, // Ensures the image stays behind the content
+        opacity: 0.5, 
+        zIndex: -1, 
       }
     }}
     >
@@ -100,7 +100,6 @@ function Login() {
         }}
       >
 
-        {/* Left side with image */}
         <Box
           sx={{
             width: '50%',
@@ -191,3 +190,4 @@ function Login() {
 }
 
 export default Login;
+
