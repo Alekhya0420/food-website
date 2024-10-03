@@ -22,16 +22,6 @@ function About() {
   console.log("Registration is",register);
   console.log("Details are",details);
 
-  const handleImageChange = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setImagePreview(reader.result);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
 
   const submitHandle = (data) => {
 
@@ -47,17 +37,13 @@ function About() {
         text: 'User with this email already exists!',
         footer: 'Please try with a different email.',
       });
+      return;
     }
 
     let jsonData= new FormData();
     jsonData.append("name",data.name);
     jsonData.append("email",data.email);
     jsonData.append("password",data.password);
-    jsonData.append("image",data);
-
-    if (data.image && data.image[0]) {
-      jsonData.append('image', data.image[0], data.image[0].name);
-    }
 
 
     dispatch(registration(jsonData))
@@ -191,7 +177,7 @@ function About() {
             {...register("email", { required: "Email is compulsory",
               pattern:
               {
-                value:/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,4}$/,
+                value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{3,4}$/,
                 message:"Email should be in proper format"
               }
              })}
@@ -215,7 +201,7 @@ function About() {
         </FormControl>
         <p style={{color:"red",position:"absolute",marginTop:'2px'}}>{errors.password?.message}</p>
 
-        <FormControl fullWidth margin="normal">
+        {/* <FormControl fullWidth margin="normal">
           <FormLabel style={{color:"white"}}>Give image:</FormLabel>
           <TextField
             type="file"
@@ -227,7 +213,7 @@ function About() {
            {...register("image",{required:"image is actually required"})}
            onChange={handleImageChange}
           />
-        </FormControl>
+        </FormControl> */}
 
 
 

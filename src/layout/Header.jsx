@@ -43,9 +43,6 @@ const Header = () => {
         <li>
           <NavLink to={"/reg-page"}>Registration</NavLink>
         </li>
-        <li>
-          <NavLink to={"/contact-page"}>Contact</NavLink>
-        </li>
 
         <li>
           <NavLink to={"/login-page"}>Login</NavLink>
@@ -53,6 +50,10 @@ const Header = () => {
 
         <li>
           <NavLink to={"/food-page"}>Food</NavLink>
+        </li>
+
+        <li>
+          <NavLink to={"/contact-page"}>Contact</NavLink>
         </li>
 
 
@@ -70,7 +71,7 @@ const Header = () => {
               aria-label="open drawer"
               edge="start"
               sx={{
-                display: { sm: "none" },
+                display: { sm: "none"},
               }}
               onClick={handleDrawerToggle}
             >
@@ -97,9 +98,6 @@ const Header = () => {
                 <li>
                   <NavLink to={"/reg-page"}>Registration</NavLink>
                 </li>
-                <li>
-                  <NavLink to={"/contact-page"}>Contact</NavLink>
-                </li>
 
                 <li>
                   <NavLink to={"/login-page"}>Login</NavLink>
@@ -107,6 +105,10 @@ const Header = () => {
 
                 <li>
                   <NavLink to={"/food-page"}>Food</NavLink>
+                </li>
+
+                <li>
+                  <NavLink to={"/contact-page"}>Contact</NavLink>
                 </li>
 
                                

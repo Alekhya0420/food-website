@@ -36,6 +36,24 @@
         "[object Object]",
         {}
       ]
+    },
+    {
+      "id": "5407",
+      "name": "Abhijit Pakrashi",
+      "email": "Abhijit@gmail.com",
+      "password": "abhi123#"
+    },
+    {
+      "id": "bc1f",
+      "name": "Abhijit Pakrashi",
+      "email": "Abhijit@gmail.com",
+      "password": "abhi123#"
+    },
+    {
+      "id": "1fb2",
+      "name": "Rachin",
+      "email": "rachin@gmail.com",
+      "password": "RACHIN123#"
     }
   ]
 }
