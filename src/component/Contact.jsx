@@ -1,58 +1,43 @@
-
-//my contact page
 import React from 'react';
 import { Box, Card, CardContent, Grid, List, ListItem, ListItemIcon, ListItemText, Avatar, Divider, Typography } from '@mui/material';
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { Connection } from '../data/data';
-import { motion } from 'framer-motion';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 
 function Contact() {
   return (
     <Box sx={{ bgcolor: '#e8eaf6', minHeight: '100vh', p: 3 }}>
       <Box sx={{ textAlign: 'center', mb: 5 }}>
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, type: 'spring', stiffness: 10, damping: 10 }}
+        <Avatar
+          sx={{
+            bgcolor: 'black',
+            mb: 2,
+            mx: 'auto',
+            width: 230,
+            height: 120,
+            fontSize: '30px',
+            color: 'goldenrod'
+          }}
         >
-          <Avatar
-            sx={{
-              bgcolor: 'black',
-              mb: 2,
-              mx: 'auto',
-              width: 230,
-              height: 120,
-              fontSize: '30px',
-              color:'goldenrod'
-            }}
-          >
-            My resturant<FastfoodIcon/>
-          </Avatar>
-          <Typography variant="h4" gutterBottom>WELCOME!</Typography>
-          <Typography variant="body1" sx={{ px: 2 }}>
-            Experience the Best in Food Delivery. Alexa is a premier food delivery website that redefines the way you experience dining at home.
-            With a seamless interface and a vast array of culinary options, Alexa makes discovering and enjoying your favorite dishes easier than ever.
-            Whether you're craving comfort food, gourmet meals, or the latest in contemporary cuisine, Alexa has something to satisfy every taste.
-          </Typography>
-        </motion.div>
+          My restaurant <FastfoodIcon />
+        </Avatar>
+        <Typography variant="h4" gutterBottom>WELCOME!</Typography>
+        <Typography variant="body1" sx={{ px: 2 }}>
+          Experience the Best in Food Delivery. Alexa is a premier food delivery website that redefines the way you experience dining at home.
+          With a seamless interface and a vast array of culinary options, Alexa makes discovering and enjoying your favorite dishes easier than ever.
+          Whether you're craving comfort food, gourmet meals, or the latest in contemporary cuisine, Alexa has something to satisfy every taste.
+        </Typography>
       </Box>
 
       <Box sx={{ mb: 4, textAlign: 'center' }}>
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, type: 'spring', stiffness: 10, damping: 10 }}
-        >
-          <Typography variant="h5" gutterBottom>Exceptional Food Delivery</Typography>
-          <Typography variant="body1" sx={{ px: 2 }}>
-            Alexa is your go-to destination for exceptional food delivery, bringing the best restaurants to your doorstep with just a few clicks.
-            Offering a diverse menu selection, from classic comfort food to innovative gourmet dishes, Alexa ensures that every meal is delivered fresh,
-            hot, and ready to enjoy. The platform is easy to navigate, making it simple to satisfy your cravings quickly and effortlessly.
-          </Typography>
-        </motion.div>
+        <Typography variant="h5" gutterBottom>Exceptional Food Delivery</Typography>
+        <Typography variant="body1" sx={{ px: 2 }}>
+          Alexa is your go-to destination for exceptional food delivery, bringing the best restaurants to your doorstep with just a few clicks.
+          Offering a diverse menu selection, from classic comfort food to innovative gourmet dishes, Alexa ensures that every meal is delivered fresh,
+          hot, and ready to enjoy. The platform is easy to navigate, making it simple to satisfy your cravings quickly and effortlessly.
+        </Typography>
       </Box>
 
       <Grid container spacing={4} justifyContent="center">

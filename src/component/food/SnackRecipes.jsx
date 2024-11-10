@@ -17,6 +17,7 @@ function SnackRecipes() {
         console.error('Error fetching recipes:', error);
       });
   }, [snack]); 
+  console.log("reciepie are",recipes);
 
   // Group recipes by mealType
   const groupedRecipes = recipes.reduce((acc, recipe) => {
@@ -29,7 +30,7 @@ function SnackRecipes() {
   return (
     <Container>
       <Typography variant="h4" align="center" gutterBottom sx={{ marginTop: '20px' }}>
-        {snack.charAt(0).toUpperCase() + snack.slice(1)} Recipes
+       Recipes
       </Typography>
       
       {Object.keys(groupedRecipes).map((mealType) => (

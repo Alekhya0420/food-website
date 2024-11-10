@@ -4,7 +4,7 @@ import { menuList } from '../data/data';
 
 function Menu() {
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', p: 2 }}>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', p: 2, mt: 6 }}> {/* Increased mt to 6 */}
       {menuList.map((menu) => (
         <Card
           key={menu.id}
@@ -51,7 +51,7 @@ function Menu() {
               >
                 {menu.description}
               </Typography>
-              <Typography sx={{bgcolor:'gainsboro'}}>Price:{menu.price}</Typography>
+              <Typography sx={{ bgcolor: 'gainsboro' }}>Price: {menu.price}</Typography>
             </CardContent>
           </CardActionArea>
         </Card>

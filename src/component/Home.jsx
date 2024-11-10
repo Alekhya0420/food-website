@@ -12,7 +12,7 @@ function Home() {
       {/* Section 1: Banner page*/}
       <Box
         sx={{
-          backgroundImage: `linear-gradient(to left,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(${Banner})`,
+          backgroundImage: `linear-gradient(to left,rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(${Banner})`,
           height: '100vh',
           backgroundSize: 'cover',
           backgroundPosition: 'center',

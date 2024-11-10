@@ -79,21 +79,7 @@ function About() {
         padding: '20px',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
         position:'relative',
-
-        '&:before':
-        {
-          content:'""',
-          backgroundImage:`url(${dish})`,
-          position:'absolute',
-          opacity:0.6,
-          top:0,
-          left:0,
-          height:'100%',
-          width:'100%',
-          zIndex:-1,
-          backgroundPosition:'center',
-          backgroundSize:'cover'
-        }
+        background: 'linear-gradient(to right, rgb(193, 216, 230), rgb(255, 255, 235))',
       }}
     >
       <Box 

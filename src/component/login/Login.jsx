@@ -267,20 +267,7 @@ function Login() {
         alignItems: 'center',
         height: '100vh',
         padding: '20px',
-        position: 'relative',
-        '&::before': {
-          content: '""',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          backgroundImage: `url(${chola})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: 0.5,
-          zIndex: -1,
-        },
+        background: 'linear-gradient(to right, rgb(193, 216, 230), rgb(255, 255, 235))',
       }}
     >
       <Box
